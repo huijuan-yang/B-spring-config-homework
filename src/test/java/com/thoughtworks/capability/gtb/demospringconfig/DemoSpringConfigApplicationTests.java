@@ -6,7 +6,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-@SpringBootTest
+@SpringBootTest(properties = {"levelNumber = 1"})
 class DemoSpringConfigApplicationTests {
 
 	@Autowired
@@ -14,7 +14,7 @@ class DemoSpringConfigApplicationTests {
 
 	@Test
 	void contextLoads() {
-		assertEquals(levelController.getLevel(), "basic");
+		assertEquals(levelController.getLevel(), "advanced");
 	}
 
 }
